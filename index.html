@@ -80,48 +80,44 @@
   </div>
 
   <div class="contact">
-    <table border="1">
+    <table border="1" style="width:625px">
       <form action="/action_page.php">
         <h3>Contact Form</h3>
         <tr>
-          <th>First Name</th></tr>
-          <tr>
-            <th>Last Name</th>
-          </tr>
-          <tr>
-            <th>Email</th>
-          </tr>
-          <tr>
-            <th>Phone Number</th>
-          </tr>
-          <tr>
-            <th>Country</th>
-          </tr>
-          <tr>
-            <th>Subject</th>
-          </tr>
-        <tr>
-          <td><input type="text" id="fname" name="firstname" placeholder="Your name.."></td>
+          <th>First Name</th>
+          <td><input type="text" id="fname" name="firstname" placeholder="Your name.." style="width:100%"></td>
         </tr>
         <tr>
-          <td><input type="text" id="lname" name="lastname" placeholder="Your last name.."></td>
+          <th>Last Name</th>
+          <td><input type="text" id="lname" name="lastname" placeholder="Your last name.." style="width:100%"></td>
         </tr>
         <tr>
-          <td><textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-          </td>
+          <th>Email</th>
+          <td><input type="text" id="email" name="email" placeholder="Your email.." style="width:100%"></td>
         </tr>
         <tr>
-          <td><select id="country" name="country">
+          <th>Phone Number</th>
+          <td><input type="text" id="num" name="number" placeholder="Your phone number.." style="width:100%"></td>
+        </tr>
+        <tr>
+          <th>Country</th>
+          <td><select id="country" name="country" style="width:100%">
               <option value="Singapore">Singapore</option>
               <option value="Indonesia">Indonesia</option>
               <option value="Malaysia">Malaysia</option>
+              <option value="Others">Others</option>
             </select>
           </td>
         </tr>
         <tr>
-          <input type="submit" value="Submit">
+          <th>Subject</th>
+          <td><textarea id="subject" name="subject" placeholder="Write something.." style="height:200px;width:100%"></textarea>
         </tr>
       </form>
     </table>
+    <br>
+    <form action="thankyou.html">
+      <input type="submit" value="Submit" />
+  </form>
   </div>
 </body>
