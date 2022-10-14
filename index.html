@@ -1,123 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <title>My Personal Website</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    html {
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <style>
+        #image {
+            background-color: #f7f7f7;
+        }
 
-    *,
-    *:before,
-    *:after {
-      box-sizing: inherit;
-    }
+        #home,
+        #about,
+        #contact {
+            padding: 15px;
+        }
 
-    .column {
-      float: left;
-      width: 33.3%;
-      margin-bottom: 16px;
-      padding: 0 8px;
-    }
+        #ahome,
+        #aabout,
+        #acontact {
+            color: black;
+            padding: 10px;
+        }
 
-    @media screen and (max-width: 650px) {
-      .column {
-        width: 100%;
-        display: block;
-      }
-    }
+        #ahome:hover,
+        #aabout:hover,
+        #acontact:hover {
+            background-color: lightblue;
+        }
 
-    .card {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    }
+        .carousel-item>img, .carousel-item>embed {
+            width: 100%;
+            height: 800px;
+        }
 
-    .container {
-      padding: 0 16px;
-    }
-
-    .container::after,
-    .row::after {
-      content: "";
-      clear: both;
-      display: table;
-    }
-
-    .title {
-      color: grey;
-    }
-
-    .button {
-      border: none;
-      outline: 0;
-      display: inline-block;
-      padding: 8px;
-      color: white;
-      background-color: #000;
-      text-align: center;
-      cursor: pointer;
-      width: 100%;
-    }
-
-    .button:hover {
-      background-color: #555;
-    }
-  </style>
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: DarkSalmon;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
-  <div class="row">
-    <div class="column">
-      <div class="card">
-        <img src="img/Profilepict.png" alt="William" style="width:100%">
-        <div class="container">
-          <h2>William Lay</h2>
-          <p class="title">Singapore Management University</p>
-          <p>Information Systems Student</p>
-          <p>william@example.com</p>
-          <p><button class="button">Contact</button></p>
+    <div id="nav">
+        <div id="image">
+            <a href="https://lyw142.github.io/"><img src="img/william-lay-logo.png" width="125px" height="125px"
+                    class="rounded mx-auto d-block"></a>
         </div>
-      </div>
+        <ul class="nav justify-content-center bg-light">
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                    <!--<div class="collapse navbar-collapse" id="navbarNav"> -->
+                    <ul class="navbar-nav">
+                        <li id="home" class="nav-item">
+                            <a id="ahome" class="nav-link" aria-current="page" href="https://lyw142.github.io/">Home</a>
+                        </li>
+                        <li id="about" class="nav-item">
+                            <a id="aabout" class="nav-link" href="#content">About</a>
+                        </li>
+                        <li id="contact" class="nav-item">
+                            <a id="acontact" class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                    <!-- </div> -->
+                </div>
+            </nav>
+        </ul>
     </div>
-  </div>
+    <a href="#content"></a>
+    <div id="content">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <!-- <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button> -->
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/My project-1 (1).png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 style="color: darkviolet;">Welcome to my website!!!</h1>
+                        <h5>Hi, I am William Lay and currently a undergraduate student studying information systems in
+                            Singapore Management University</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <embed type="text/html" src="education.html" class="d-block w-100">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 style="color: darkviolet;">Education</h1>
+                        <p>Here is my education history</p>
+                    </div>
+                </div>
+                <!--<div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div> -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
 
-  <div class="contact">
-    <table border="1" style="width:625px">
-      <form action="/action_page.php">
-        <h3>Contact Form</h3>
-        <tr>
-          <th>First Name</th>
-          <td><input type="text" id="fname" name="firstname" placeholder="Your name.." style="width:100%"></td>
-        </tr>
-        <tr>
-          <th>Last Name</th>
-          <td><input type="text" id="lname" name="lastname" placeholder="Your last name.." style="width:100%"></td>
-        </tr>
-        <tr>
-          <th>Email</th>
-          <td><input type="text" id="email" name="email" placeholder="Your email.." style="width:100%"></td>
-        </tr>
-        <tr>
-          <th>Phone Number</th>
-          <td><input type="text" id="num" name="number" placeholder="Your phone number.." style="width:100%"></td>
-        </tr>
-        <tr>
-          <th>Country</th>
-          <td><select id="country" name="country" style="width:100%">
-              <option value="Singapore">Singapore</option>
-              <option value="Indonesia">Indonesia</option>
-              <option value="Malaysia">Malaysia</option>
-              <option value="Others">Others</option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <th>Subject</th>
-          <td><textarea id="subject" name="subject" placeholder="Write something.." style="height:200px;width:100%"></textarea>
-        </tr>
-      </form>
-    </table>
-    <br>
-    <form action="thankyou.html">
-      <input type="submit" value="Submit" />
-  </form>
-  </div>
+    <footer>
+        <a href="#contact"></a>
+        <div class="contact">
+            <table style="margin: auto;">
+                <form action="/action_page.php">
+                    <h3>Contact Form</h3>
+                    <tr>
+                        <th>First Name</th>
+                        <td><input type="text" id="fname" name="firstname" placeholder="Your name.." style="width:100%">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Last Name</th>
+                        <td><input type="text" id="lname" name="lastname" placeholder="Your last name.."
+                                style="width:100%"></td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td><input type="text" id="email" name="email" placeholder="Your email.." style="width:100%">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Phone Number</th>
+                        <td><input type="text" id="num" name="number" placeholder="Your phone number.."
+                                style="width:100%"></td>
+                    </tr>
+                    <tr>
+                        <th>Country</th>
+                        <td><select id="country" name="country" style="width:100%">
+                                <option value="Singapore">Singapore</option>
+                                <option value="Indonesia">Indonesia</option>
+                                <option value="Malaysia">Malaysia</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Subject</th>
+                        <td><textarea id="subject" name="subject" placeholder="Write something.."
+                                style="height:200px;width:100%"></textarea>
+                    </tr>
+                </form>
+            </table>
+            <br>
+            <input type="submit" value="Submit" onclick="onSubmit()"/>
+        </div>
+    </footer>
+
+    <script>
+        function onSubmit() {
+            alert('Thank You')
+            document.getElementById("fname").textContent = "";
+            document.getElementById("lname").textContent = "";
+            document.getElementById("email").textContent = "";
+            document.getElementById("num").textContent = "";
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
 </body>
+
+</html>
