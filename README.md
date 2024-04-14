@@ -6,3 +6,5 @@ Hi there 👋
 - 🌱 I’m currently learning web development
 - 💞️ I’m looking to collaborate on Java, Python related projects
 - 📫 How to reach me: william.lay.2021@scis.smu.edu.sg or lay.william@yahoo.com.sg
+- Other Projects include:
+- Earthquakes and Tsunami Visualizations: https://github.com/jolenechew/is428-Visualization-Project
